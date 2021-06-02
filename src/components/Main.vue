@@ -1,189 +1,152 @@
 <template>
   <div class="main-section">
     <h3 class="section-title teko white">
-      How to use
+      Graf neorientat
     </h3>
     <pre class="npm-code white">
-              <code>
-npm install vue-particles --save-dev
-              </code>
+               <p class="code">
+Definiție: Se numește graf neorientat o pereche ordonată de mulțimi G=(X,U), unde:
+<br>
+X este o mulțime finită și nevidă de elemente numite vârfuri sau noduri;
+<br>
+U este o mulțime finită de submulțimi cu două elemente din X, numite muchii.
+              </p>
      </pre>
-
     <br>
-
-
-    <div class="wrap-code text-left">
-      <h4 class="white">
-        Main.js file
-      </h4>
-      <pre class="language-js"><code>
-import Vue from 'vue'
-import VueParticles from 'vue-particles'
-Vue.use(VueParticles)
-        </code></pre>
-    </div>
+    <h3 class="section-title teko white">
+      Graf interactiv
+    </h3>
+<d3-network :net-nodes="nodes" :net-links="links" :options="options">
+    </d3-network>
     <br>
-    <div class="wrap-code text-left">
-      <h4 class="white">
-        App.vue file - Simple example
-      </h4>
-      <pre class="language-html"><code>
-{{appCode}}
-        </code></pre>
-    </div>
-    <br>
-
-    <div class="wrap-code text-left">
-      <h4 class="white">
-        App.vue file - Full example
-      </h4>
-      <pre class="language-html"><code>
-{{appCodeFull}}
-        </code></pre>
-    </div>
-    <br>
-
-    <div class="wrap-table">
-      <h4 class="white text-left">
-       Props
-      </h4>
+    <h3 class="section-title teko white">
+      Tipuri de grafuri neorientate
+    </h3>
+  <div class="wrap-table">
       <table class="rwd-table">
 
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Description</th>
+            <th>Nume</th>
+            <th>Part</th>
           </tr>
         </thead>
 
         <tr>
-          <td data-th="Name">color</td>
-          <td data-th="Type">String</td>
-          <td data-th="Default">#dedede</td>
-          <td data-th="Description">Particle color</td>
+          <td data-th="Nume">Conex</td>
+          <td data-th="Part">Între oricare 2 noduri distincte există cel puțin un lanț.</td>
+        </tr>
+
+        <tr>
+          <td data-th="Nume">Aciclic</td>
+          <td data-th="Part">Între oricare 2 noduri distincte există cel puțin un lanț.</td>
+        </tr>
+
+        <tr>
+          <td data-th="Nume">Hamiltonian</td>
+          <td data-th="Part">Conține cel puțin un ciclu Hamiltonian (trece prin toate vârfurile)</td>
+        </tr>
+
+        <tr>
+          <td data-th="Nume">Eulerian</td>
+          <td data-th="Part">Conține cel puțin un lant Eulerian (trece prin toate muchiile)</td>
         </tr>
         <tr>
-          <td data-th="Name">particleOpacity</td>
-          <td data-th="Type">Number</td>
-          <td data-th="Default">0.7</td>
-          <td data-th="Description">Particle opacity</td>
+          <td data-th="Nume">Arbori</td>
+          <td data-th="Part">Conține cel puțin un lant Eulerian (trece prin toate muchiile)</td>
         </tr>
-        <tr>
-          <td data-th="Name">particlesNumber</td>
-          <td data-th="Type">Number</td>
-          <td data-th="Default">80</td>
-          <td data-th="Description">Amount of particles</td>
-        </tr>
-        <tr>
-          <td data-th="Name">shapeType</td>
-          <td data-th="Type">String</td>
-          <td data-th="Default">"circle"</td>
-          <td data-th="Description">
-            Available shape types: "circle","edge","triangle",
-            "polygon","star"
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">particleSize</td>
-          <td data-th="Type">Number</td>
-          <td data-th="Default">4</td>
-          <td data-th="Description">
-            Size of single particle
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">linesColor</td>
-          <td data-th="Type">String</td>
-          <td data-th="Default">#dedede</td>
-          <td data-th="Description">
-            Lines color
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">linesWidth</td>
-          <td data-th="Type">Number</td>
-          <td data-th="Default">1</td>
-          <td data-th="Description">
-            Lines width
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">lineLinked</td>
-          <td data-th="Type">Boolean</td>
-          <td data-th="Default">true</td>
-          <td data-th="Description">
-            Enable lines
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">lineOpacity</td>
-          <td data-th="Type">Number</td>
-          <td data-th="Default">0.4</td>
-          <td data-th="Description">
-            Line opacity
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">linesDistance</td>
-          <td data-th="Type">Number</td>
-          <td data-th="Default">150</td>
-          <td data-th="Description">
-            Lines distance
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">moveSpeed</td>
-          <td data-th="Type">Number</td>
-          <td data-th="Default">3</td>
-          <td data-th="Description">
-            Particles speed
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">hoverEffect</td>
-          <td data-th="Type">Boolean</td>
-          <td data-th="Default">true</td>
-          <td data-th="Description">
-            Enable hover effect
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">hoverMode</td>
-          <td data-th="Type">String</td>
-          <td data-th="Default">grab</td>
-          <td data-th="Description">
-            Available hover modes:
-            "grab", "repulse", "bubble"
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">clickEffect</td>
-          <td data-th="Type">Boolean</td>
-          <td data-th="Default">true</td>
-          <td data-th="Description">
-            Enable click effect
-          </td>
-        </tr>
-        <tr>
-          <td data-th="Name">clickMode</td>
-          <td data-th="Type">String</td>
-          <td data-th="Default">push</td>
-          <td data-th="Description">
-            Available click modes:
-            "push", "remove", "repulse", "bubble"
-          </td>
-        </tr>
+
       </table>
     </div>
+<br>
 
+    <h3 class="section-title teko white">
+      Graf orientat
+    </h3>
+    <pre class="npm-code white">
+              <p class="code">
+Se numeşte graf orientat sau digraf o pereche ordonată de mulțimi notată
+<br>
+G=(V, U), unde:
+<br>
+V este o mulțime finită şi nevidă ale cărei elemente se numesc noduri sau vârfuri;
+<br>
+U este o mulțime de perechi ordonate de elemente distincte din V ale cărei elemente se numesc arce.
+              </p>
+     </pre>
+     <br>
+        <h3 class="section-title teko white">
+      Determinarea celui mai scurt drum dintre 2 puncte
+    </h3>
+<iframe src="https://anvaka.github.io/ngraph.path.demo/#?graph=amsterdam-roads" title="W3Schools Free Online Web Tutorials">
+</iframe>
+    <br>
+        <h2 class="section-title teko white">
+      Cum functioneaza?
+    </h2>
+    <pre class="npm-code white">
+      <p class="code">
+        Fiecare nod reprezinta o intersectie, iar fiecare muchie primește o greutate care in acest caz reprezintă lungimea drumului.
+     </p>
+    </pre>
+    <img class="npm-code" src="../assets/greutate.png" alt="">
+    <pre class="npm-code white">
+      <p class="code">
+        Algoritmul calculează toate drumurile posibile, în final returnând cel mai scurt drum între cele 2 puncte.
+     </p>
+    </pre>
+    <img class="npm-code" src="../assets/roads.png" alt="">
+    <pre class="npm-code white">
+      <p class="code">
+        Grafurile orientate pot fi folosite pentru a crea sensuri unice!
+     </p>
+    </pre>
+    <img class="npm-code" src="../assets/sensUnic.png" alt="">
 
+    <pre class="npm-code white">
+      <p class="code">
+        AC + CB = 14 <br>
+        AD + DE + DB = 13 <br>
+        AB = 10 <br>
+        Răspuns AB.
+     </p>
+    </pre>
 
+    <h3 class="section-title teko white">
+      Arbori
+    </h3>
+    <pre class="npm-code white">
+      <p class="code">
+          Un arbore este un graf conex și aciclic.
+      </p>
+     </pre>
+    <br>
+    <h3 class="section-title teko white">
+      Utilizarea arborilor
+    </h3>
+    <h2 class="section-title teko white">
+      Arbori genealogici
+    </h2>
 
+<img class="npm-code" src="../assets/arboreGenealogic.jpg" alt="">
+    <h2 class="section-title teko white">
+      Cum functioneaza?
+    </h2>
+    <pre class="npm-code white">
+      <p class="code">
+      Fiecare nod copil provinde din 1 sau 2 noduri parinti.
+      <br>
+      Arborele genealogic este diferit de un arbore normal datorită aparitiei unor noi noduri ce nu apartin retelei originale. În acest caz rețeaua originală este familia Badea.
+      </p>
+    </pre>
+<img class="npm-code" src="../assets/arboresange.png" alt="">
+<br>
+<br>
+<img class="npm-code" src="../assets/arboreiar.jpg" alt="">
   </div>
 </template>
 <script>
+import D3Network from 'vue-d3-network'
   /* eslint-disable */
   const appCode = `<template>
       <div id="app">
@@ -215,11 +178,69 @@ Vue.use(VueParticles)
     /* eslint-disable */
   export default {
     name: 'main-content',
+      components: {
+    D3Network
+  },
     data () {
       return {
         appCode,
-        appCodeFull
+        appCodeFull,
+        nodes: [
+          { id: 1, name: 'nodul 1' },
+          { id: 2, name: 'nodul 2' },
+          { id: 3, _color:'orange', name: 'nodul 3' },
+          { id: 4, name: 'nodul 4' },
+          { id: 5, name: 'nodul 5' },
+          { id: 6, name: 'nodul 6' },
+          { id: 7, name: 'nodul 7' },
+          { id: 8, name: 'nodul 8' },
+          { id: 9, name: 'nodul 9' },
+          { id: 10, name: 'nodul 10' }
+        ],
+        links: [
+          { sid: 1, tid: 2, _color:'red' },
+          { sid: 2, tid: 8, _color:'f0f' },
+          { sid: 3, tid: 4,_color:'rebeccapurple' },
+          { sid: 4, tid: 5 },
+          { sid: 5, tid: 6 },
+          { sid: 7, tid: 8 },
+          { sid: 5, tid: 8 },
+          { sid: 3, tid: 8 },
+          { sid: 7, tid: 9 },
+          { sid: 10, tid: 9 }
+        ],
+        options:
+        {
+          force: 3000,
+          nodeSize: 20,
+          nodeLabels: true,
+          linkWidth:5
+        }
       }
-    }
+    },
+
   }
 </script>
+
+
+<style lang="scss">
+iframe{
+  width: 100%;
+  height: 500px;
+}
+  .node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+  color: white;
+  .node-label{
+    color: white;
+  }
+}
+  .node-labels{
+    color: white;
+  }
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <footer class="footer text-center">
     <p class="white">
-      created by creotip.io
+      Creat de clasa a XI-B
     </p>
   </footer>
 </template>

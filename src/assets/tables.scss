@@ -3,7 +3,8 @@ $breakpoint-alpha:  767px; // adjust to your needs
 
 .rwd-table {
   margin: 1em 0;
-  min-width: 300px; // adjust to your needs
+  max-width: 650px; // adjust to your needs
+  width: 100%;
 
   tr {
     border-top: 1px solid #ddd;

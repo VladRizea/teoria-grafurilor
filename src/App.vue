@@ -4,16 +4,13 @@
     <div class="wrap-banner">
       <div class="main-title">
         <h2>
-          Vue-Particles
+          TEORIA GRAFURILOR INTERACTIVA
         </h2>
         <p class="subtitle">
-          Vue.js component for particles backgrounds
+          Clasa a XI-B
         </p>
-        <p class="subtitle">
-          SSR compatible
-        </p>
+
         <br>
-        <a class="gh-button" target="_blank" href="https://github.com/creotip/vue-particles"><span class="gh-button__icon"></span>Download</a>
       </div>
       <vue-particles
         color="#ffffff"
@@ -83,11 +80,14 @@
   code[class*="language-"],
   pre[class*="language-"],
   pre,
-  code {
-    font-family: Menlo, Monaco, Andale Mono, Ubuntu Mono, monospace !important;
-    font-size: .95em;
+  .code {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    white-space: normal;
+    padding: 10px;
     @media (max-width: 767px) {
-      font-size: .85em;
+      font-size: 16px;
     }
   }
 
@@ -103,6 +103,7 @@
     background: #292929;
     border-radius: 3px;
     box-shadow: 2px 6px 17px rgba(0, 0, 0, 0.39);
+    width: 100%;
   }
 
   h1, h2 {
