@@ -96,14 +96,7 @@ U este o mulțime de perechi ordonate de elemente distincte din V ale cărei ele
      </p>
     </pre>
     <img class="npm-code" src="../assets/roads.png" alt="">
-    <pre class="npm-code white">
-      <p class="code">
-        Grafurile orientate pot fi folosite pentru a crea sensuri unice!
-     </p>
-    </pre>
-    <img class="npm-code" src="../assets/sensUnic.png" alt="">
-
-    <pre class="npm-code white">
+        <pre class="npm-code white">
       <p class="code">
         AC + CB = 14 <br>
         AD + DE + DB = 13 <br>
@@ -111,6 +104,14 @@ U este o mulțime de perechi ordonate de elemente distincte din V ale cărei ele
         Răspuns AB.
      </p>
     </pre>
+    <pre class="npm-code white">
+      <p class="code">
+        Grafurile orientate pot fi folosite pentru a crea sensuri unice!
+     </p>
+    </pre>
+    <img class="npm-code" src="../assets/sensUnic.png" alt="">
+
+
 
     <h3 class="section-title teko white">
       Arbori
